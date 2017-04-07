@@ -1,4 +1,5 @@
 # UPPERCASE-GameMaker-Client
+UPPERCASE GameMaker: Studio 클라이언트 익스텐션입니다.
 
 ## 설치하기
 1. 게임메이커 스튜디오의 `Import Extension`으로 `UPPERCASE-GameMaker-Client.gmez`를 불러옵니다.
@@ -77,18 +78,38 @@ CONNECT_TO_ROOM_SERVER(ROOM_SERVER_CONNECTOR.socket_server_host, UPPERCASE_SOCKE
 ```
 
 ## 룸 관련 기능
+룸에 대한 자세한 내용은 [UPPERCASE-ROOM 문서](https://github.com/Hanul/UPPERCASE/blob/master/DOC/GUIDE/UPPERCASE-ROOM.md)를 참고하시기 바랍니다.
 
 ### `ENTER_ROOM(room_name)`
+`room_name`의 이름을 가진 룸에 접속합니다.
+
 ### `ROOM_ON(room_id, method_name, method)`
+특정 `method_name`으로 룸에서 데이터를 보내게 되면, 여기에서 받게 됩니다.
+
 ### `ROOM_OFF(room_id, method_name, method)`
+더 이상 `method_name`의 `method`로 데이터를 받지 않습니다.
+
 ### `ROOM_OFF_ALL(room_id, method_name)`
+더 이상 `method_name`으로 데이터를 받지 않습니다.
+
 ### `ROOM_SEND_VALUE(room_id, method_name, value)`
+룸에 값을 전송합니다.
+
 ### `ROOM_SEND_VALUE_WITH_CALLBACK(room_id, method_name, value, callback)`
+룸에 값을 전송하고, 룸으로부터 응답을 받아옵니다.
+
 ### `ROOM_SEND_DATA(room_id, method_name, data)`
+룸에 데이터를 전송합니다.
+
 ### `ROOM_SEND_DATA_WITH_CALLBACK(room_id, method_name, data, callback)`
+룸에 데이터를 전송하고, 룸으로부터 응답을 받아옵니다.
+
 ### `EXIT_ROOM(room_id)`
+룸에서 나옵니다. 이 이후에는 해당 룸에서 더 이상 데이터를 주고받을 수 없습니다.
 
 ## 모델 관련 기능
+모델 대한 자세한 내용은 [UPPERCASE-MODEL 문서](https://github.com/Hanul/UPPERCASE/blob/master/DOC/GUIDE/UPPERCASE-MODEL.md)를 참고하시기 바랍니다.
+
 ### `MODEL_CREATE(model_room, data)`
 ### `MODEL_CREATE_WITH_CALLBACK(model_room, data, callback)`
 ### `MODEL_GET(model_room, id, callback)`
