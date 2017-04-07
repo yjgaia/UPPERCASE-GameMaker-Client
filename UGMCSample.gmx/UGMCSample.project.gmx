@@ -92,13 +92,22 @@
       <script>scripts\LOG_MAP.gml</script>
       <script>scripts\RANDOM_BETWEEN.gml</script>
     </scripts>
+    <script>scripts\sample_connection_listener.gml</script>
+    <script>scripts\sample_connection_error_listener.gml</script>
+    <script>scripts\sample_disconnected_listener.gml</script>
+    <script>scripts\sample_on_new_message_callback.gml</script>
+    <script>scripts\sample_send_message_callback.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="UPPERCASE-GameMaker-Client">
       <object>objects\ROOM_SERVER_CONNECTOR</object>
       <object>objects\ROOM</object>
     </objects>
+    <object>objects\object_global</object>
   </objects>
+  <rooms name="rooms">
+    <room>rooms\room_main</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>

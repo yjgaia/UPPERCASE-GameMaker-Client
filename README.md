@@ -11,9 +11,13 @@
 * `UPPERCASE_SOCKET_SERVER_PORT` 소켓 서버의 포트를 설정합니다.
 
 ```gml
-globalvar UPPERCASE_SERVER_HOST = 'localhost';
-globalvar UPPERCASE_WEB_SERVER_PORT = 8888;
-globalvar UPPERCASE_SOCKET_SERVER_PORT = 8889;
+globalvar UPPERCASE_SERVER_HOST;
+globalvar UPPERCASE_WEB_SERVER_PORT;
+globalvar UPPERCASE_SOCKET_SERVER_PORT;
+
+UPPERCASE_SERVER_HOST = 'localhost';
+UPPERCASE_WEB_SERVER_PORT = 8888;
+UPPERCASE_SOCKET_SERVER_PORT = 8889;
 ```
 
 ## 서버 접속하기
@@ -46,8 +50,8 @@ else {
 // 접속하였습니다.
 
 // 첫 접속시에만 실행
-if (object_global.is_first_connected == true) {
-    object_global.is_first_connected = false;
+if (object_global.is_first_connect == true) {
+    object_global.is_first_connect = false;
 
     ON_FROM_ROOM_SERVER('__DISCONNECTED', sample_disconnected_listener);
     
@@ -55,7 +59,7 @@ if (object_global.is_first_connected == true) {
     with (object_global) {
     
         SampleRoom = ENTER_ROOM('SampleProejct/Sample');
-        ROOM_ON(SampleRoom, 'message', sample_on_new_message_callback);
+        ROOM_ON(SampleRoom, 'messageFromServer', sample_on_new_message_callback);
         
         SampleRoom2 = ENTER_ROOM('SampleProejct/Sample2');
     }

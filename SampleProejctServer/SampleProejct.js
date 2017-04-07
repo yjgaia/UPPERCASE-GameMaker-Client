@@ -8,5 +8,8 @@ BOOT({
 		
 		webServerPort : 8888,
 		socketServerPort : 8889
+	},
+	NODE_CONFIG : {
+		isNotUsingCPUClustering : true
 	}
 });
