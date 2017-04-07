@@ -103,3 +103,9 @@ CONNECT_TO_ROOM_SERVER(ROOM_SERVER_CONNECTOR.socket_server_host, UPPERCASE_SOCKE
 
 ## 기타 기능
 ### `TIME(time_milliseconds)`
+
+## 라이센스
+[MIT](LICENSE)
+
+## 작성자
+[Young Jae Sim](https://github.com/Hanul)
