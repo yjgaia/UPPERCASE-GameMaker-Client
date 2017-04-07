@@ -13,7 +13,7 @@
 ```gml
 globalvar UPPERCASE_SERVER_HOST = 'localhost';
 globalvar UPPERCASE_WEB_SERVER_PORT = 8888;
-globalvar UPPERCASE_SOCKET_SERVER_PORT = 8888;
+globalvar UPPERCASE_SOCKET_SERVER_PORT = 8889;
 ```
 
 ## 서버 접속하기
