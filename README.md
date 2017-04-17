@@ -125,6 +125,9 @@ CONNECT_TO_ROOM_SERVER(ROOM_SERVER_CONNECTOR.socket_server_host, UPPERCASE_SOCKE
 ## 기타 기능
 ### `TIME(time_milliseconds)`
 
+## 주의사항
+데이터를 전송할 때 `true`와 `false`는 문자열(`'true'`, `'false'`)로 넘겨야 합니다. GameMaker: Studio에서 `true`와 `false`는 단순히 1과 0이기 때문입니다.
+
 ## 라이센스
 [MIT](LICENSE)
 
