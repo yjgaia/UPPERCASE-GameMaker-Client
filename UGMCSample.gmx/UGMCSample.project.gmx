@@ -5,12 +5,59 @@
   </Configs>
   <NewExtensions>
     <extension index="0">extensions\UPPERCASE-GameMaker-Client</extension>
+    <extension index="1">extensions\UGML</extension>
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites"/>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
+    <scripts name="UGML">
+      <scripts name="LIST">
+        <script>scripts\CHECK_IS_IN_LIST.gml</script>
+        <script>scripts\REMOVE_VALUE_IN_LIST.gml</script>
+      </scripts>
+      <scripts name="MAP">
+        <script>scripts\COPY_MAP.gml</script>
+        <script>scripts\REMOVE_VALUE_IN_MAP.gml</script>
+        <script>scripts\FIND_KEY_IN_MAP.gml</script>
+      </scripts>
+      <scripts name="DRAW">
+        <script>scripts\DRAW_TEXT_WITH_OUTLINE.gml</script>
+      </scripts>
+      <scripts name="STORE">
+        <script>scripts\SAVE_DATA.gml</script>
+        <script>scripts\LOAD_DATA.gml</script>
+        <script>scripts\REMOVE_DATA.gml</script>
+      </scripts>
+      <scripts name="STRING">
+        <script>scripts\TRIM_STR.gml</script>
+        <script>scripts\TRIM_STR_NO_NEW_LINE.gml</script>
+        <script>scripts\RANDOM_STR.gml</script>
+        <script>scripts\SUB_STR.gml</script>
+        <script>scripts\CHAR_AT.gml</script>
+        <script>scripts\BYTE_AT.gml</script>
+        <script>scripts\STR_LENGTH_UNICODE_COUNT_2.gml</script>
+        <script>scripts\SUB_STR_UNICODE_COUNT_2.gml</script>
+        <script>scripts\SPLIT.gml</script>
+        <script>scripts\INDEX_OF.gml</script>
+        <script>scripts\ENCODE_URL.gml</script>
+        <script>scripts\ENCRYPT.gml</script>
+        <script>scripts\UUID.gml</script>
+      </scripts>
+      <scripts name="FIX">
+        <script>scripts\MAKE_BLEND_COLOR_FOR_SPINE.gml</script>
+      </scripts>
+      <script>scripts\ENCRYPTION_REQUEST.gml</script>
+      <script>scripts\TERNARY.gml</script>
+      <script>scripts\RANDOM_BETWEEN.gml</script>
+      <script>scripts\LOG.gml</script>
+      <script>scripts\LOG_MAP.gml</script>
+      <script>scripts\DECIMAL_TO_HEX.gml</script>
+      <script>scripts\TIME_TO_JS_TIME.gml</script>
+      <script>scripts\CLEAR_AND_GOTO_ROOM.gml</script>
+      <script>scripts\ds_map_list_destroy.gml</script>
+    </scripts>
     <scripts name="UPPERCASE-GameMaker-Client">
       <scripts name="ROOM_SERVER">
         <script>scripts\CONNECT_TO_ROOM_SERVER.gml</script>
@@ -52,47 +99,6 @@
       </scripts>
       <script>scripts\TIME.gml</script>
       <script>scripts\SERVER_TIME.gml</script>
-    </scripts>
-    <scripts name="UGML">
-      <scripts name="LIST">
-        <script>scripts\CHECK_IS_IN_LIST.gml</script>
-        <script>scripts\REMOVE_VALUE_IN_LIST.gml</script>
-      </scripts>
-      <scripts name="MAP">
-        <script>scripts\COPY_MAP.gml</script>
-        <script>scripts\REMOVE_VALUE_IN_MAP.gml</script>
-        <script>scripts\FIND_KEY_IN_MAP.gml</script>
-      </scripts>
-      <scripts name="DRAW">
-        <script>scripts\DRAW_TEXT_WITH_OUTLINE.gml</script>
-      </scripts>
-      <scripts name="STORE">
-        <script>scripts\SAVE_DATA.gml</script>
-        <script>scripts\LOAD_DATA.gml</script>
-        <script>scripts\REMOVE_DATA.gml</script>
-      </scripts>
-      <scripts name="STRING">
-        <script>scripts\TRIM_STR.gml</script>
-        <script>scripts\TRIM_STR_NO_NEW_LINE.gml</script>
-        <script>scripts\RANDOM_STR.gml</script>
-        <script>scripts\SUB_STR.gml</script>
-        <script>scripts\CHAR_AT.gml</script>
-        <script>scripts\BYTE_AT.gml</script>
-        <script>scripts\STR_LENGTH_UNICODE_COUNT_2.gml</script>
-        <script>scripts\SUB_STR_UNICODE_COUNT_2.gml</script>
-        <script>scripts\SPLIT.gml</script>
-        <script>scripts\INDEX_OF.gml</script>
-        <script>scripts\ENCODE_URL.gml</script>
-      </scripts>
-      <scripts name="FIX">
-        <script>scripts\MAKE_BLEND_COLOR_FOR_SPINE.gml</script>
-        <script>scripts\CLEAR_AND_GOTO_ROOM.gml</script>
-      </scripts>
-      <script>scripts\TERNARY.gml</script>
-      <script>scripts\TIME_TO_JS_TIME.gml</script>
-      <script>scripts\LOG.gml</script>
-      <script>scripts\LOG_MAP.gml</script>
-      <script>scripts\RANDOM_BETWEEN.gml</script>
     </scripts>
     <script>scripts\sample_connection_listener.gml</script>
     <script>scripts\sample_connection_error_listener.gml</script>
