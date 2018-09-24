@@ -43,8 +43,10 @@ public class UGMCNative {
         new Thread() {
 
             public void run() {
-                out.write(json + "\r\n");
-                out.flush();
+                if (out != null) {
+                    out.write(json + "\r\n");
+                    out.flush();
+                }
             }
 
         }.start();
@@ -57,8 +59,10 @@ public class UGMCNative {
         new Thread() {
 
             public void run() {
-                appOut.write(status + ":" + json + "\r\n");
-                appOut.flush();
+                if (appOut != null) {
+                    appOut.write(status + ":" + json + "\r\n");
+                    appOut.flush();
+                }
             }
 
         }.start();

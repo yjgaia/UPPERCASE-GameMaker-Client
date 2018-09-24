@@ -48,8 +48,10 @@
         <script>scripts\MODEL_FIND.gml</script>
         <script>scripts\MODEL_COUNT.gml</script>
         <script>scripts\MODEL_CHECK_IS_EXISTS.gml</script>
+        <script>scripts\MODEL_CHECK_EXISTS.gml</script>
       </scripts>
       <script>scripts\TIME.gml</script>
+      <script>scripts\SERVER_TIME.gml</script>
     </scripts>
     <scripts name="UGML">
       <scripts name="LIST">

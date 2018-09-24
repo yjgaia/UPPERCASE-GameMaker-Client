@@ -99,13 +99,15 @@ if (socket != -1) {
             // disconnected.
             
             // off all to off callbacks.
-            for (var i = 0; i &lt; ds_list_size(to_off_callback_names); i += 1) {
-                OFF_ALL_FROM_ROOM_SERVER(ds_list_find_value(to_off_callback_names, i));
+            if (to_off_callback_names != -1) {
+                for (var i = 0; i &lt; ds_list_size(to_off_callback_names); i += 1) {
+                    OFF_ALL_FROM_ROOM_SERVER(ds_list_find_value(to_off_callback_names, i));
+                }
+                ds_list_destroy(to_off_callback_names);
+                to_off_callback_names = -1;
             }
-            ds_list_destroy(to_off_callback_names);
             
             network_destroy(socket);
-        
             socket = -1;
             
             RUN_METHOD('__DISCONNECTED', '');
@@ -148,10 +150,13 @@ if (socket != -1) {
 if (ds_map_find_value(async_load, 'type') == '__UGMC__DISCONNECTED') {
     
     // off all to off callbacks.
-    for (var __I = 0; __I &lt; ds_list_size(to_off_callback_names); __I += 1) {
-        OFF_ALL_FROM_ROOM_SERVER(ds_list_find_value(to_off_callback_names, __I));
+    if (to_off_callback_names != -1) {
+        for (var __I = 0; __I &lt; ds_list_size(to_off_callback_names); __I += 1) {
+            OFF_ALL_FROM_ROOM_SERVER(ds_list_find_value(to_off_callback_names, __I));
+        }
+        ds_list_destroy(to_off_callback_names);
+        to_off_callback_names = -1;
     }
-    ds_list_destroy(to_off_callback_names);
     
     RUN_METHOD('__DISCONNECTED', ds_map_create());
 }
@@ -228,10 +233,12 @@ if (__ASYNC_ID == socket) {
                 RUN_METHOD(__METHOD_NAME, __DATA);
                 
                 // off callback.
-                var __CALLBACK_INDEX = ds_list_find_index(to_off_callback_names, __METHOD_NAME);
-                if (__CALLBACK_INDEX != -1) {
-                    OFF_ALL_FROM_ROOM_SERVER(__METHOD_NAME);
-                    ds_list_delete(to_off_callback_names, __CALLBACK_INDEX);
+                if (to_off_callback_names != -1) {
+                    var __CALLBACK_INDEX = ds_list_find_index(to_off_callback_names, __METHOD_NAME);
+                    if (__CALLBACK_INDEX != -1) {
+                        OFF_ALL_FROM_ROOM_SERVER(__METHOD_NAME);
+                        ds_list_delete(to_off_callback_names, __CALLBACK_INDEX);
+                    }
                 }
                 
                 ds_map_destroy(__PARAMS);
@@ -351,10 +358,12 @@ else if (__ASYNC_ID == app_socket &amp;&amp; __TYPE == network_type_data) {
                     RUN_METHOD(__METHOD_NAME, __DATA);
                     
                     // off callback.
-                    var __CALLBACK_INDEX = ds_list_find_index(to_off_callback_names, __METHOD_NAME);
-                    if (__CALLBACK_INDEX != -1) {
-                        OFF_ALL_FROM_ROOM_SERVER(__METHOD_NAME);
-                        ds_list_delete(to_off_callback_names, __CALLBACK_INDEX);
+                    if (to_off_callback_names != -1) {
+                        var __CALLBACK_INDEX = ds_list_find_index(to_off_callback_names, __METHOD_NAME);
+                        if (__CALLBACK_INDEX != -1) {
+                            OFF_ALL_FROM_ROOM_SERVER(__METHOD_NAME);
+                            ds_list_delete(to_off_callback_names, __CALLBACK_INDEX);
+                        }
                     }
                     
                     ds_map_destroy(__PARAMS);
@@ -366,10 +375,13 @@ else if (__ASYNC_ID == app_socket &amp;&amp; __TYPE == network_type_data) {
         else if (__KEY == 3) {
         
             // off all to off callbacks.
-            for (var __I = 0; __I &lt; ds_list_size(to_off_callback_names); __I += 1) {
-                OFF_ALL_FROM_ROOM_SERVER(ds_list_find_value(to_off_callback_names, __I));
+            if (to_off_callback_names != -1) {
+                for (var __I = 0; __I &lt; ds_list_size(to_off_callback_names); __I += 1) {
+                    OFF_ALL_FROM_ROOM_SERVER(ds_list_find_value(to_off_callback_names, __I));
+                }
+                ds_list_destroy(to_off_callback_names);
+                to_off_callback_names = -1;
             }
-            ds_list_destroy(to_off_callback_names);
             
             RUN_METHOD('__DISCONNECTED', '');
         }

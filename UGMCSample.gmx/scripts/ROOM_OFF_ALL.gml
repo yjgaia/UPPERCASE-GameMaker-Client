@@ -6,7 +6,7 @@ var method_name = argument1;
 
 with (room_id) {
     
-    if (ds_map_exists(method_map, method_name) == true) {
+    if (method_map != -1 && ds_exists(method_map, ds_type_map) == true && ds_map_exists(method_map, method_name) == true) {
         
         var methods = ds_map_find_value(method_map, method_name);
         

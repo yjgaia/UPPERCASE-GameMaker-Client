@@ -23,7 +23,7 @@ with (ROOM_SERVER_CONNECTOR) {
         var buffer = buffer_create(256, buffer_grow, 1);
         buffer_seek(buffer, buffer_seek_start, 0);
         buffer_write(buffer, buffer_string, chr(13) + chr(10) + json_encode(map) + chr(13) + chr(10));
-        network_send_packet(socket, buffer, buffer_tell(buffer));
+        network_send_raw(socket, buffer, buffer_tell(buffer));
         buffer_delete(buffer);
     }
     
@@ -35,5 +35,7 @@ with (ROOM_SERVER_CONNECTOR) {
     ON_FROM_ROOM_SERVER(callback_name, callback);
     
     // to off callback.
-    ds_list_add(to_off_callback_names, callback_name);
+    if (to_off_callback_names != -1) {
+        ds_list_add(to_off_callback_names, callback_name);
+    }
 }

@@ -9,7 +9,7 @@ with (ROOM_SERVER_CONNECTOR) {
     if (ds_map_exists(method_map, __METHOD_NAME) == true) {
     
         var __INNER_METHODS = ds_list_create();
-    
+        
         var __METHODS = ds_map_find_value(method_map, __METHOD_NAME);
         
         for (var __I = 0; __I < ds_list_size(__METHODS); __I += 1) {
