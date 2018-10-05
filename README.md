@@ -4,6 +4,7 @@ UPPERCASE GameMaker: Studio 클라이언트 익스텐션입니다.
 ## 설치하기
 1. 게임메이커 스튜디오의 `Import Extension`으로 `UPPERCASE-GameMaker-Client.gmez`를 불러옵니다.
 2. 불러온 익스텐션을 열어 `Import Resources` 탭으로 이동하여 `Import All` 버튼을 누릅니다.
+3. 서버 쪽에서는 프로젝트의 `NODE` 폴더에 `OVERRIDE-UPPERCASE` 폴더를 복사합니다.
 
 ## 설정하기
 아래 세가지 변수를 글로벌 변수로 설정합니다.
